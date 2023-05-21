@@ -23,7 +23,7 @@ mixin ChewieFactory on WidgetFactory {
         : null;
     return VideoPlayer(
       url,
-      aspectRatio: dimensOk ? width! / height! : 16 / 9,
+      aspectRatio: dimensOk ? width / height : 16 / 9,
       autoResize: !dimensOk,
       autoplay: autoplay,
       controls: controls,
@@ -41,7 +41,6 @@ mixin ChewieFactory on WidgetFactory {
     switch (meta.element.localName) {
       case kTagVideo:
         meta.register(TagVideo(this, meta).op);
-        break;
     }
     return super.parse(meta);
   }
