@@ -21,6 +21,7 @@ dependencies:
   flutter_cache_manager:
     git:
       url: https://github.com/usefulteam/flutter_cache_manager
+      path: flutter_cache_manager
       ref: develop
 
   flutter_widget_from_html_core:
