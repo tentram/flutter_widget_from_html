@@ -2,6 +2,7 @@ name: fwfh_just_audio
 version: 0.9.0+2
 description: WidgetFactory extension to render AUDIO with the just_audio plugin.
 homepage: https://github.com/daohoangson/flutter_widget_from_html
+publish_to: "none"
 
 environment:
   flutter: ">=2.2.0"
@@ -10,7 +11,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_widget_from_html_core: ">=0.8.0 <0.11.0"
+
+  flutter_widget_from_html_core:
+    git:
+      url: https://github.com/tentram/flutter_widget_from_html
+      path: packages/core
+
   just_audio: ">=0.9.0 <0.10.0"
 
 dependency_overrides:

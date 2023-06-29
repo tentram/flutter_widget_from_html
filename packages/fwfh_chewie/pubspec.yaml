@@ -13,9 +13,15 @@ dependencies:
     git:
       url: https://github.com/tentram/chewie
       ref: master
+
   flutter:
     sdk: flutter
-  flutter_widget_from_html_core: ">=0.8.0 <0.11.0"
+
+  flutter_widget_from_html_core:
+    git:
+      url: https://github.com/tentram/flutter_widget_from_html
+      path: packages/core
+
   video_player: ^2.6.1
 
 dependency_overrides:
