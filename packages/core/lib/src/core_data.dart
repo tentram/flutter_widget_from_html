@@ -9,6 +9,7 @@ part 'data/build_bits.dart';
 part 'data/css.dart';
 part 'data/image.dart';
 part 'data/text_style.dart';
+part 'data/html_widget_colors.dart';
 
 /// A building element metadata.
 abstract class BuildMetadata {

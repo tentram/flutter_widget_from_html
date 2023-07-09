@@ -189,10 +189,20 @@ class WidgetFactory {
   }
 
   /// Builds 1-pixel-height divider.
-  Widget? buildDivider(BuildMetadata meta) => const DecoratedBox(
-        decoration: BoxDecoration(color: Color.fromRGBO(0, 0, 0, 1)),
-        child: SizedBox(height: 1),
-      );
+  Widget? buildDivider(BuildMetadata meta) {
+    final color = _widget != null &&
+            _widget?.colors != null &&
+            _widget?.colors?.hr != null
+        ? _widget?.colors?.hr
+        : null;
+
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        color: color,
+      ),
+      child: const SizedBox(height: 1),
+    );
+  }
 
   /// Builds [GestureDetector].
   Widget? buildGestureDetector(

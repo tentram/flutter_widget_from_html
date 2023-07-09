@@ -18,6 +18,9 @@ class HtmlWidget extends StatefulWidget {
   /// The base url to resolve links and image urls.
   final Uri? baseUrl;
 
+  /// Colors for HTML widgets.
+  final HtmlWidgetColors? colors;
+
   /// Controls whether the widget tree is built asynchronously.
   ///
   /// If not set, async build will be enabled automatically if the
@@ -95,6 +98,7 @@ class HtmlWidget extends StatefulWidget {
   /// The [html] argument must not be null.
   const HtmlWidget(
     this.html, {
+    this.colors,
     this.baseUrl,
     this.buildAsync,
     this.customStylesBuilder,
