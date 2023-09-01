@@ -16,6 +16,7 @@ dependencies:
     git:
       url: https://github.com/tentram/flutter_widget_from_html
       path: packages/core
+      ref: master
 
   webview_flutter: ^4.2.4
   webview_flutter_android: ^3.9.5

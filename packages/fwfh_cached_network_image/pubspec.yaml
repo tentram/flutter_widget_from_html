@@ -28,6 +28,7 @@ dependencies:
     git:
       url: https://github.com/tentram/flutter_widget_from_html
       path: packages/core
+      ref: master
 
 dependency_overrides:
   flutter_widget_from_html_core:

@@ -16,36 +16,43 @@ dependencies:
     git:
       url: https://github.com/tentram/flutter_widget_from_html
       path: packages/core
+      ref: master
 
   fwfh_cached_network_image:
     git:
       url: https://github.com/tentram/flutter_widget_from_html
       path: packages/fwfh_cached_network_image
+      ref: master
 
   fwfh_chewie:
     git:
       url: https://github.com/tentram/flutter_widget_from_html
       path: packages/fwfh_chewie
+      ref: master
 
   fwfh_just_audio:
     git:
       url: https://github.com/tentram/flutter_widget_from_html
       path: packages/fwfh_just_audio
+      ref: master
 
   fwfh_svg:
     git:
       url: https://github.com/tentram/flutter_widget_from_html
       path: packages/fwfh_svg
+      ref: master
 
   fwfh_url_launcher:
     git:
       url: https://github.com/tentram/flutter_widget_from_html
       path: packages/fwfh_url_launcher
+      ref: master
 
   fwfh_webview:
     git:
       url: https://github.com/tentram/flutter_widget_from_html
       path: packages/fwfh_webview
+      ref: master
 
   html: ^0.15.0
 
