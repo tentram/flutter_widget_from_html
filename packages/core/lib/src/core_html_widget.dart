@@ -105,7 +105,7 @@ class HtmlWidget extends StatefulWidget {
     this.customWidgetBuilder,
     this.enableCaching,
     this.factoryBuilder,
-    Key? key,
+    super.key,
     this.onErrorBuilder,
     this.onLoadingBuilder,
     this.onTapImage,
@@ -113,8 +113,7 @@ class HtmlWidget extends StatefulWidget {
     RebuildTriggers? rebuildTriggers,
     this.renderMode = RenderMode.column,
     this.textStyle,
-  })  : _rebuildTriggers = rebuildTriggers,
-        super(key: key);
+  }) : _rebuildTriggers = rebuildTriggers;
 
   @override
   State<HtmlWidget> createState() => HtmlWidgetState();

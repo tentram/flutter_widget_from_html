@@ -5,7 +5,7 @@ import 'package:fwfh_cached_network_image/fwfh_cached_network_image.dart';
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: HtmlWidget(
-            '<img src="https://github.com/daohoangson/flutter_widget_from_html/raw/master/demo_app/logos/android.png" />',
+            '<img src="https://raw.githubusercontent.com/daohoangson/flutter_widget_from_html/0000998/demo_app/logos/icon.png" />',
             factoryBuilder: () => MyWidgetFactory(),
           ),
         ),

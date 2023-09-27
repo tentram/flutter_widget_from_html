@@ -1,12 +1,12 @@
 name: fwfh_chewie
-version: 0.7.1+2
+version: 0.7.1+4
 description: WidgetFactory extension to render VIDEO with the chewie plugin.
 homepage: https://github.com/daohoangson/flutter_widget_from_html
 publish_to: "none"
 
 environment:
-  sdk: ">=3.0.0 <4.0.0"
   flutter: ">=3.7.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   chewie:
@@ -28,8 +28,6 @@ dependencies:
 dependency_overrides:
   flutter_widget_from_html_core:
     path: ../core
-  fwfh_text_style:
-    path: ../fwfh_text_style
 
 dev_dependencies:
   flutter_test:
@@ -37,3 +35,11 @@ dev_dependencies:
   lint: any
   plugin_platform_interface: any
   video_player_platform_interface: ">=5.0.0 <7.0.0"
+
+funding:
+  - https://patreon.com/daohoangson
+  - https://buymeacoffee.com/daohoangson
+
+topics:
+  - video
+  - fwfh
