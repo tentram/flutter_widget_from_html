@@ -9,10 +9,7 @@ environment:
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
-  chewie:
-    git:
-      url: https://github.com/tentram/chewie
-      ref: master
+  chewie: ^1.7.1
 
   flutter:
     sdk: flutter

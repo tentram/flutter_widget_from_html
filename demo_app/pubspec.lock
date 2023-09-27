@@ -111,12 +111,11 @@ packages:
   chewie:
     dependency: transitive
     description:
-      path: "."
-      ref: master
-      resolved-ref: "5f4a9a6048092e4478c4fbcfe1ec88c464ee5098"
-      url: "https://github.com/tentram/chewie"
-    source: git
-    version: "1.5.0"
+      name: chewie
+      sha256: ccfce3350ae9fd419cd336cdf3380f77a08e45171e1e3cb3d499d204de5e7ea8
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.7.1"
   cli_util:
     dependency: transitive
     description:
@@ -181,6 +180,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.6"
+  dbus:
+    dependency: transitive
+    description:
+      name: dbus
+      sha256: "6f07cba3f7b3448d42d015bfd3d53fe12e5b36da2423f23838efc1d5fb31a263"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.7.8"
   fake_async:
     dependency: transitive
     description:
@@ -534,6 +541,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
+  package_info_plus:
+    dependency: transitive
+    description:
+      name: package_info_plus
+      sha256: "6ff267fcd9d48cb61c8df74a82680e8b82e940231bb5f68356672fde0397334a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.1.0"
+  package_info_plus_platform_interface:
+    dependency: transitive
+    description:
+      name: package_info_plus_platform_interface
+      sha256: "9bc8ba46813a4cc42c66ab781470711781940780fd8beddd0c3da62506d3a6c6"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1"
   path:
     dependency: transitive
     description:
@@ -995,51 +1018,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "11.7.1"
-  wakelock:
+  wakelock_plus:
     dependency: transitive
     description:
-      path: wakelock
-      ref: main
-      resolved-ref: "4cae5a07eb4950be933822ae0860507be4204206"
-      url: "https://github.com/tentram/wakelock"
-    source: git
-    version: "1.0.0"
-  wakelock_macos:
+      name: wakelock_plus
+      sha256: aac3f3258f01781ec9212df94eecef1eb9ba9350e106728def405baa096ba413
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.1"
+  wakelock_plus_platform_interface:
     dependency: transitive
     description:
-      path: wakelock_macos
-      ref: main
-      resolved-ref: "4cae5a07eb4950be933822ae0860507be4204206"
-      url: "https://github.com/tentram/wakelock"
-    source: git
-    version: "1.0.0"
-  wakelock_platform_interface:
-    dependency: transitive
-    description:
-      path: wakelock_platform_interface
-      ref: main
-      resolved-ref: "4cae5a07eb4950be933822ae0860507be4204206"
-      url: "https://github.com/tentram/wakelock"
-    source: git
-    version: "1.0.0"
-  wakelock_web:
-    dependency: transitive
-    description:
-      path: wakelock_web
-      ref: main
-      resolved-ref: "4cae5a07eb4950be933822ae0860507be4204206"
-      url: "https://github.com/tentram/wakelock"
-    source: git
-    version: "1.0.0"
-  wakelock_windows:
-    dependency: transitive
-    description:
-      path: wakelock_windows
-      ref: main
-      resolved-ref: "4cae5a07eb4950be933822ae0860507be4204206"
-      url: "https://github.com/tentram/wakelock"
-    source: git
-    version: "1.0.0"
+      name: wakelock_plus_platform_interface
+      sha256: "40fabed5da06caff0796dc638e1f07ee395fb18801fbff3255a2372db2d80385"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.0"
   watcher:
     dependency: transitive
     description:
