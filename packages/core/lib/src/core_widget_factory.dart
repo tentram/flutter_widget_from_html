@@ -678,19 +678,16 @@ class WidgetFactory {
         if (name != null) {
           meta.register(_anchorOp(name));
         }
-        break;
 
       case 'abbr':
       case 'acronym':
         meta[kCssTextDecorationLine] = kCssTextDecorationUnderline;
         meta[kCssTextDecorationStyle] = kCssTextDecorationStyleDotted;
-        break;
 
       case 'address':
         meta
           ..[kCssDisplay] = kCssDisplayBlock
           ..tsb.enqueue(TextStyleOps.fontStyle, FontStyle.italic);
-        break;
 
       case 'article':
       case 'aside':
@@ -702,36 +699,29 @@ class WidgetFactory {
       case 'nav':
       case 'section':
         meta[kCssDisplay] = kCssDisplayBlock;
-        break;
 
       case 'blockquote':
       case 'figure':
         meta
           ..[kCssDisplay] = kCssDisplayBlock
           ..[kCssMargin] = '1em 40px';
-        break;
 
       case 'b':
       case 'strong':
         meta.tsb.enqueue(TextStyleOps.fontWeight, FontWeight.bold);
-        break;
 
       case 'big':
         meta.tsb.enqueue(TextStyleOps.fontSizeTerm, kCssFontSizeLarger);
-        break;
       case 'small':
         meta.tsb.enqueue(TextStyleOps.fontSizeTerm, kCssFontSizeSmaller);
-        break;
 
       case kTagBr:
         meta.register(_tagBr ??= TagBr(this).buildOp);
-        break;
 
       case kTagCenter:
         meta
           ..[kCssDisplay] = kCssDisplayBlock
           ..[kCssTextAlign] = kCssTextAlignWebkitCenter;
-        break;
 
       case 'cite':
       case 'dfn':
@@ -739,7 +729,6 @@ class WidgetFactory {
       case 'i':
       case 'var':
         meta.tsb.enqueue(TextStyleOps.fontStyle, FontStyle.italic);
-        break;
 
       case kTagCode:
       case kTagKbd:
@@ -749,7 +738,6 @@ class WidgetFactory {
           TextStyleOps.fontFamily,
           const [kTagCodeFont1, kTagCodeFont2],
         );
-        break;
       case kTagPre:
         _tagPre ??= BuildOp(
           onWidgets: (meta, widgets) => listOrNull(
@@ -765,31 +753,25 @@ class WidgetFactory {
             const [kTagCodeFont1, kTagCodeFont2],
           )
           ..register(_tagPre!);
-        break;
 
       case kTagDetails:
         meta.register(TagDetails(this, meta).op);
-        break;
 
       case 'dd':
         meta
           ..[kCssDisplay] = kCssDisplayBlock
           ..[kCssMargin] = '0 0 1em 40px';
-        break;
       case 'dl':
         meta[kCssDisplay] = kCssDisplayBlock;
-        break;
       case 'dt':
         meta
           ..[kCssDisplay] = kCssDisplayBlock
           ..tsb.enqueue(TextStyleOps.fontWeight, FontWeight.bold);
-        break;
 
       case 'del':
       case 's':
       case 'strike':
         meta[kCssTextDecorationLine] = kCssTextDecorationLineThrough;
-        break;
 
       case kTagFont:
         _tagFont ??= BuildOp(
@@ -806,7 +788,6 @@ class WidgetFactory {
           },
         );
         meta.register(_tagFont!);
-        break;
 
       case 'hr':
         _tagHr ??=
@@ -815,7 +796,6 @@ class WidgetFactory {
           ..[kCssDisplay] = kCssDisplayBlock
           ..[kCssMargin + kSuffixBottom] = '1em'
           ..register(_tagHr!);
-        break;
 
       case 'h1':
         meta
@@ -823,95 +803,79 @@ class WidgetFactory {
           ..[kCssMargin] = '0.67em 0'
           ..tsb.enqueue(TextStyleOps.fontSizeEm, 2.0)
           ..tsb.enqueue(TextStyleOps.fontWeight, FontWeight.bold);
-        break;
       case 'h2':
         meta
           ..[kCssDisplay] = kCssDisplayBlock
           ..[kCssMargin] = '0.83em 0'
           ..tsb.enqueue(TextStyleOps.fontSizeEm, 1.5)
           ..tsb.enqueue(TextStyleOps.fontWeight, FontWeight.bold);
-        break;
       case 'h3':
         meta
           ..[kCssDisplay] = kCssDisplayBlock
           ..[kCssMargin] = '1em 0'
           ..tsb.enqueue(TextStyleOps.fontSizeEm, 1.17)
           ..tsb.enqueue(TextStyleOps.fontWeight, FontWeight.bold);
-        break;
       case 'h4':
         meta
           ..[kCssDisplay] = kCssDisplayBlock
           ..[kCssMargin] = '1.33em 0'
           ..tsb.enqueue(TextStyleOps.fontWeight, FontWeight.bold);
-        break;
       case 'h5':
         meta
           ..[kCssDisplay] = kCssDisplayBlock
           ..[kCssMargin] = '1.67em 0'
           ..tsb.enqueue(TextStyleOps.fontSizeEm, .83)
           ..tsb.enqueue(TextStyleOps.fontWeight, FontWeight.bold);
-        break;
       case 'h6':
         meta
           ..[kCssDisplay] = kCssDisplayBlock
           ..[kCssMargin] = '2.33em 0'
           ..tsb.enqueue(TextStyleOps.fontSizeEm, .67)
           ..tsb.enqueue(TextStyleOps.fontWeight, FontWeight.bold);
-        break;
 
       case kTagImg:
         _tagImg ??= TagImg(this).buildOp;
         meta.register(_tagImg!);
-        break;
 
       case 'ins':
       case 'u':
         meta[kCssTextDecorationLine] = kCssTextDecorationUnderline;
-        break;
 
       case kTagOrderedList:
       case kTagUnorderedList:
         meta
           ..[kCssDisplay] = kCssDisplayBlock
           ..register(TagLi(this, meta).op);
-        break;
 
       case 'mark':
         meta
           ..[kCssBackgroundColor] = '#ff0'
           ..[kCssColor] = '#000';
-        break;
 
       case 'p':
         meta
           ..[kCssDisplay] = kCssDisplayBlock
           ..[kCssMargin] = '1em 0';
-        break;
 
       case kTagQ:
         _tagQ ??= TagQ(this).buildOp;
         meta.register(_tagQ!);
-        break;
 
       case kTagRuby:
         meta.register(TagRuby(this, meta).op);
-        break;
 
       case 'script':
       case 'style':
         meta[kCssDisplay] = kCssDisplayNone;
-        break;
 
       case 'sub':
         meta
           ..[kCssVerticalAlign] = kCssVerticalAlignSub
           ..tsb.enqueue(TextStyleOps.fontSizeTerm, kCssFontSizeSmaller);
-        break;
       case 'sup':
         meta
           ..[kCssVerticalAlign] = kCssVerticalAlignSuper
           ..tsb.enqueue(TextStyleOps.fontSizeTerm, kCssFontSizeSmaller);
-        break;
 
       case kTagTable:
         meta
@@ -927,31 +891,24 @@ class WidgetFactory {
               tryParseDoubleFromMap(attrs, kAttributeCellPadding) ?? 1.0,
             ),
           );
-        break;
       case kTagTableCell:
         meta[kCssVerticalAlign] = kCssVerticalAlignMiddle;
-        break;
       case kTagTableHeaderCell:
         meta
           ..[kCssVerticalAlign] = kCssVerticalAlignMiddle
           ..tsb.enqueue(TextStyleOps.fontWeight, FontWeight.bold);
-        break;
       case kTagTableCaption:
         meta[kCssTextAlign] = kCssTextAlignCenter;
-        break;
     }
 
     for (final attribute in attrs.entries) {
       switch (attribute.key) {
         case kAttributeAlign:
           meta[kCssTextAlign] = attribute.value;
-          break;
         case kAttributeDir:
           meta[kCssDirection] = attribute.value;
-          break;
         case kAttributeId:
           meta.register(_anchorOp(attribute.value));
-          break;
       }
     }
   }
@@ -964,27 +921,22 @@ class WidgetFactory {
       case kCssBackgroundColor:
         _styleBgColor ??= StyleBgColor(this).buildOp;
         meta.register(_styleBgColor!);
-        break;
 
       case kCssColor:
         final color = tryParseColor(style.value);
         if (color != null) {
           meta.tsb.enqueue(TextStyleOps.color, color);
         }
-        break;
 
       case kCssDirection:
         meta.tsb.enqueue(TextStyleOps.textDirection, style.term);
-        break;
 
       case kCssFontFamily:
         final list = TextStyleOps.fontFamilyTryParse(style.values);
         meta.tsb.enqueue(TextStyleOps.fontFamily, list);
-        break;
 
       case kCssFontSize:
         meta.tsb.enqueue(TextStyleOps.fontSize, style.value);
-        break;
 
       case kCssFontStyle:
         final term = style.term;
@@ -993,7 +945,6 @@ class WidgetFactory {
         if (fontStyle != null) {
           meta.tsb.enqueue(TextStyleOps.fontStyle, fontStyle);
         }
-        break;
 
       case kCssFontWeight:
         final value = style.value;
@@ -1002,7 +953,6 @@ class WidgetFactory {
         if (fontWeight != null) {
           meta.tsb.enqueue(TextStyleOps.fontWeight, fontWeight);
         }
-        break;
 
       case kCssHeight:
       case kCssMaxHeight:
@@ -1011,12 +961,10 @@ class WidgetFactory {
       case kCssMinWidth:
       case kCssWidth:
         StyleSizing.registerSizing(this, meta);
-        break;
 
       case kCssLineHeight:
         _tsbLineHeight ??= TextStyleOps.lineHeight(this);
         meta.tsb.enqueue(_tsbLineHeight!, style.value);
-        break;
 
       case kCssMaxLines:
       case kCssMaxLinesWebkitLineClamp:
@@ -1024,14 +972,12 @@ class WidgetFactory {
         if (maxLines != null) {
           meta.maxLines = maxLines;
         }
-        break;
 
       case kCssTextAlign:
         final term = style.term;
         if (term != null) {
           meta.register(StyleTextAlign(this, term).op);
         }
-        break;
 
       case kCssTextDecoration:
       case kCssTextDecorationColor:
@@ -1041,19 +987,16 @@ class WidgetFactory {
       case kCssTextDecorationWidth:
         _styleTextDecoration ??= StyleTextDecoration(this).op;
         meta.register(_styleTextDecoration!);
-        break;
 
       case kCssTextOverflow:
         final textOverflow = tryParseTextOverflow(style.value);
         if (textOverflow != null) {
           meta.overflow = textOverflow;
         }
-        break;
 
       case kCssVerticalAlign:
         _styleVerticalAlign ??= StyleVerticalAlign(this).buildOp;
         meta.register(_styleVerticalAlign!);
-        break;
 
       case kCssWhitespace:
         final term = style.term;
@@ -1062,7 +1005,6 @@ class WidgetFactory {
         if (whitespace != null) {
           meta.tsb.enqueue(TextStyleOps.whitespace, whitespace);
         }
-        break;
     }
 
     if (key.startsWith(kCssBorder)) {
@@ -1088,7 +1030,6 @@ class WidgetFactory {
     switch (value) {
       case kCssDisplayBlock:
         StyleSizing.registerBlock(this, meta);
-        break;
       case kCssDisplayInlineBlock:
         final displayInlineBlock = _styleDisplayInlineBlock ??= BuildOp(
           onTree: (meta, tree) {
@@ -1105,17 +1046,14 @@ class WidgetFactory {
           priority: BuildOp.kPriorityMax,
         );
         meta.register(displayInlineBlock);
-        break;
       case kCssDisplayNone:
         final displayNone = _styleDisplayNone ??= BuildOp(
           onTree: (_, tree) => tree.detach(),
           priority: BuildOp.kPriorityMax,
         );
         meta.register(displayNone);
-        break;
       case kCssDisplayTable:
         meta.register(TagTable(this, meta).op);
-        break;
     }
   }
 

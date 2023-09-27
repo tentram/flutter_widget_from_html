@@ -116,7 +116,6 @@ mixin WebViewFactory on WidgetFactory {
           },
         );
         meta.register(op);
-        break;
     }
     return super.parse(meta);
   }

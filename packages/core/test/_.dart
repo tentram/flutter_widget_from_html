@@ -425,11 +425,9 @@ class Explainer {
           clazz = 'SizedBox.shrink';
         }
         size = '';
-        break;
       case 'InfinityxInfinity':
         clazz = 'SizedBox.expand';
         size = '';
-        break;
     }
 
     final key = box.key != null ? _key(box.key!) : '';
